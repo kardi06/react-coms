@@ -1,7 +1,11 @@
+import Button from "./Button";
 const App = () => {
     return (
         <div>
-            <h1>Hello World</h1>
+            <div><Button>Click Me!</Button></div>
+            <div><Button>Buy Now</Button></div>
+            <div><Button>Seal the Deal</Button></div>
+            <div><Button>Close Ads</Button></div>
         </div>
     )
 }
