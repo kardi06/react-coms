@@ -1,4 +1,13 @@
-const Button = ({children}) => {
+const Button = ({
+    children,
+    primary,
+    secondary,
+    success,
+    warning,
+    danger,
+    rounded,
+    outline,
+}) => {
     return (
         <button>{children}</button>
     );
