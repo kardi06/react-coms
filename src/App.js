@@ -1,5 +1,5 @@
 import Button from "./Button";
-import PropTypes from "prop-types";
+
 const App = () => {
     return (
         <div>
@@ -11,18 +11,4 @@ const App = () => {
     )
 }
 
-Button.PropTypes = {
-    checkVariationValue: ({primary, secondary, success, warning, danger})=>{
-        const count = Number(!!primary)
-            + Number(!!secondary)
-            + Number(!!success) 
-            + Number(!!warning)
-            + Number(!!danger);
-        
-        if(count > 1){
-            throw new Error("Only one of primary, secondary, success, warning, danger can be true");
-        }
-        
-    }
-};
 export default App;
