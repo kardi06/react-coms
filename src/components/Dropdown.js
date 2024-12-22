@@ -11,7 +11,10 @@ const Dropdown = ({options, value, onChange}) => {
         }
 
         document.addEventListener('click', handler);
-    })
+        return () => {
+            document.removeEventListener('click', handler);
+        }
+    },[]);
 
     const handleClick = () => {
         setIsOpen(!isOpen);
