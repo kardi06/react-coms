@@ -3,7 +3,7 @@ import Button from "../components/Button";
 
 const ButtonPage = () => {
     const handleClick = () => {
-        console.log('Button Clicked!');
+        
     }
     return (
         <div>
