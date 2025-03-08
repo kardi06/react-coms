@@ -1,7 +1,7 @@
-const Table = () => {
+const Table = ({data}) => {
     return (
         <div>
-            Table aja
+            {data.length}
         </div>
     )
 }
