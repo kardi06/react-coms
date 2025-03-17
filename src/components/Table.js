@@ -1,13 +1,13 @@
-const Table = ({data, config}) => {
+const Table = ({data, config, keyFn}) => {
     const rederedHeaders = config.map((column) => {
         return <th key={column.label}>{column.label}</th>
     })
-    const rendereRows = data.map((fruit) => {
+    const rendereRows = data.map((rowData) => {
         const renderedCells = config.map((column) => {
-            return <td className="p-2" key={column.label}>{column.render(fruit)}</td>
+            return (<td className="p-2" key={column.label}>{column.render(rowData)}</td>)
         })
         return (
-            <tr key={fruit.name} className="border-b">
+            <tr key={keyFn(rowData)} className="border-b">
                 {renderedCells}
             </tr>
         )
